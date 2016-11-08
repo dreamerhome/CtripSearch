@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="ctirp_color_primary">#42b5ff</color>
+    <color name="ctirp_color_white">#ffffff</color>
+    <color name="color_primary">#3f51b5</color>
+    <color name="color_trans">#ddffffff</color>
+</resources>

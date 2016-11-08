@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/toolbar_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:contentScrim="@android:color/transparent"
+            app:statusBarScrim="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap">
+            <com.yyydjk.library.BannerLayout
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                app:autoPlayDuration="5000"
+                app:indicatorMargin="50dp"
+                app:indicatorPosition="centerBottom"
+                app:indicatorShape="oval"
+                app:indicatorSpace="3dp"
+                app:scrollDuration="1100"
+                app:defaultImage="@mipmap/ic_launcher"
+                app:selectedIndicatorColor="?attr/colorPrimary"
+                app:selectedIndicatorHeight="6dp"
+                app:selectedIndicatorWidth="6dp"
+                app:unSelectedIndicatorColor="#99ffffff"
+                app:unSelectedIndicatorHeight="6dp"
+                app:unSelectedIndicatorWidth="6dp"
+                app:layout_collapseMode="parallax"
+                app:layout_collapseParallaxMultiplier="0.7"/>
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/gradient" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                android:gravity="top"
+                app:layout_collapseMode="pin"/>
+            <FrameLayout
+                android:id="@+id/search_tab_container"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:layout_marginBottom="-4dp"
+                android:layout_gravity="bottom">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#5a000000"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_marginRight="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:id="@+id/slide_bg"
+                        android:layout_width="120dp"
+                        android:layout_height="43dp"
+                        android:background="@drawable/ctrip_slide_tab"/>
+                </LinearLayout>
+                <RadioGroup
+                    android:id="@+id/rg_slide"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+                    <RadioButton
+                        android:id="@+id/rb_left"
+                        android:background="@null"
+                        android:textColor="@color/top_layout_sliide_text_color_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:textSize="16dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="false"
+                        android:text="单程" />
+
+                    <RadioButton
+                        android:id="@+id/rb_center"
+                        android:background="@null"
+                        android:textColor="@color/top_layout_sliide_text_color_selector"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:button="@null"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="往返" />
+
+                    <RadioButton
+                        android:id="@+id/rb_right"
+                        android:background="@null"
+                        android:button="@null"
+                        android:textColor="@color/top_layout_sliide_text_color_selector"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="多程"
+                        android:visibility="visible" />
+                </RadioGroup>
+
+
+            </FrameLayout>
+            <LinearLayout
+                android:id="@+id/top_container"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_gravity="top"
+                app:layout_collapseMode="pin"
+                android:background="@color/ctirp_color_primary">
+                <RadioGroup
+                    android:layout_width="261dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_centerInParent="true">
+
+                    <RadioButton
+                        android:background="@drawable/title_left_shape"
+                        android:padding="6dp"
+                        android:textColor="@color/top_layout_text_color_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:textSize="16dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:checked="true"
+                        android:text="单程" />
+
+                    <RadioButton
+                        android:background="@drawable/title_center_shape"
+                        android:padding="6dp"
+                        android:textColor="@color/top_layout_text_color_selector"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:button="@null"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginLeft="-1dp"
+                        android:layout_marginRight="-1dp"
+                        android:text="往返" />
+
+                    <RadioButton
+                        android:background="@drawable/title_right_shape"
+                        android:padding="6dp"
+                        android:button="@null"
+                        android:textColor="@color/top_layout_text_color_selector"
+                        android:gravity="center"
+                        android:textSize="16dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:text="多程"
+                        android:visibility="visible" />
+                </RadioGroup>
+            </LinearLayout>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="fill_vertical"
+
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/search_bg"
+            android:scaleType="fitStart"/>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
